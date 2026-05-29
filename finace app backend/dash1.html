@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WealthIntel - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#121c2a",
+                      "primary-fixed": "#d2e4ff",
+                      "inverse-primary": "#a0c9ff",
+                      "outline-variant": "#c2c7d1",
+                      "surface-variant": "#d9e3f6",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#d0dbed",
+                      "primary-container": "#0f4c81",
+                      "surface-container": "#e6eeff",
+                      "error": "#ba1a1a",
+                      "secondary": "#006c49",
+                      "surface-tint": "#2d6197",
+                      "secondary-fixed-dim": "#4edea3",
+                      "on-tertiary-fixed": "#410006",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#27313f",
+                      "surface-container-highest": "#d9e3f6",
+                      "on-tertiary-container": "#ffa09d",
+                      "on-primary-container": "#8ebdf9",
+                      "inverse-on-surface": "#eaf1ff",
+                      "primary": "#00355f",
+                      "on-secondary": "#ffffff",
+                      "surface-container-high": "#dee9fc",
+                      "on-surface-variant": "#42474f",
+                      "surface": "#f8f9ff",
+                      "surface-container-low": "#eff4ff",
+                      "tertiary-container": "#8c2127",
+                      "tertiary": "#6c0513",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#07497d",
+                      "secondary-fixed": "#6ffbbe",
+                      "tertiary-fixed": "#ffdad8",
+                      "surface-bright": "#f8f9ff",
+                      "error-container": "#ffdad6",
+                      "background": "#f8f9ff",
+                      "primary-fixed-dim": "#a0c9ff",
+                      "tertiary-fixed-dim": "#ffb3b0",
+                      "secondary-container": "#6cf8bb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface": "#121c2a",
+                      "on-secondary-fixed-variant": "#005236",
+                      "on-tertiary-fixed-variant": "#881d24",
+                      "on-primary-fixed": "#001c37",
+                      "on-secondary-container": "#00714d",
+                      "outline": "#727780",
+                      "on-secondary-fixed": "#002113"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "lg": "24px",
+                      "max-width": "1280px",
+                      "xl": "32px",
+                      "sm": "8px",
+                      "gutter": "24px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "margin": "40px",
+                      "md": "16px"
+              },
+              "fontFamily": {
+                      "h2": ["Inter"],
+                      "body-md": ["Inter"],
+                      "h1": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "numeric-display": ["Inter"],
+                      "body-sm": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "h3": ["Inter"]
+              },
+              "fontSize": {
+                      "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}],
+                      "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400"}],
+                      "numeric-display": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "h3": ["20px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r border-slate-200 bg-white dark:bg-slate-900 shadow-[4px_0_12px_rgba(15,76,129,0.02)] z-50 flex flex-col h-full overflow-y-auto font-['Inter'] antialiased">
+<div class="px-6 py-8">
+<h1 class="text-2xl font-black text-blue-900 dark:text-blue-400">WealthIntel</h1>
+<p class="text-label-caps text-slate-400 mt-1 uppercase tracking-wider">Calculated Confidence</p>
+</div>
+<nav class="flex-1 px-4 space-y-1">
+<!-- Active: Dashboard -->
+<a class="bg-blue-50 dark:bg-blue-900/20 text-blue-900 dark:text-blue-300 border-r-4 border-blue-900 dark:border-blue-400 font-semibold flex items-center gap-3 px-4 py-3 rounded-l-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="text-body-sm">Dashboard</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
+<span class="text-body-sm">Upload</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-body-sm">Transactions</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+<span class="text-body-sm">Insights</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="savings">savings</span>
+<span class="text-body-sm">Budget</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="flag">flag</span>
+<span class="text-body-sm">Goals</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="text-body-sm">AI Assistant</span>
+</a>
+<a class="text-slate-500 dark:text-slate-400 flex items-center gap-3 px-4 py-3 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-blue-900 dark:hover:text-blue-300 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="text-body-sm">Settings</span>
+</a>
+</nav>
+<div class="mt-auto p-4">
+<div class="bg-surface-container rounded-xl p-4 flex items-center gap-3">
+<img alt="User profile avatar" class="w-10 h-10 rounded-full bg-primary-fixed" data-alt="close-up portrait of a professional businessman in a sleek office environment with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKStEmiW8AVxE0ss_CxUuqmUjoDtncH1QMqMIWfHU7Fg-M5YjBPwfrCR-z708fp6j-y4oj4NUhRGkwnPUNuz9Iw0siJuo5ro6CO0qc4RgzaBOufnb2Lo_d-bzUoOt8Rwa3ai8HaO2ao_D-v8jbMupyrEzBWSGFD2CmrZV3w34EcKJcYzILjOqsQfHLf9O0SGK6Ft40xM5Zpx5Cah8Mg7Ojj2z3X5C612t644fj47yCMEI6abodvy5AKd_ypUlfY47o9g4uBrMpkBw"/>
+<div class="overflow-hidden">
+<p class="text-body-sm font-bold truncate">Alex Sterling</p>
+<p class="text-label-caps text-slate-500 truncate">Premium Plan</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="fixed top-0 right-0 left-64 h-16 flex items-center justify-between px-8 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm font-['Inter']">
+<div class="flex items-center gap-4 w-1/3">
+<div class="relative w-full max-w-sm">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 border-none rounded-lg text-body-sm focus:ring-2 focus:ring-primary-container transition-all" placeholder="Search insights..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors relative cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors cursor-pointer active:opacity-70">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="text-right">
+<p class="text-label-caps text-slate-500">LAST SYNC</p>
+<p class="text-body-sm font-medium">2 mins ago</p>
+</div>
+</div>
+</header>
+<!-- Dashboard Canvas -->
+<div class="mt-16 p-8 max-w-7xl mx-auto w-full space-y-gutter">
+<!-- Hero Section: Health Score -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 pointer-events-none transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-[120px] text-primary" data-icon="verified_user">verified_user</span>
+</div>
+<div class="flex flex-col h-full justify-between relative z-10">
+<div>
+<h2 class="font-h2 text-h2 text-primary mb-2">Financial Health Score</h2>
+<p class="text-body-md text-slate-500 max-w-md">Your overall rating based on savings rate, debt-to-income, and budget adherence.</p>
+</div>
+<div class="mt-8 flex items-end gap-6">
+<div class="relative w-32 h-32 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-100" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="10"></circle>
+<circle class="text-secondary transition-all duration-1000" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="54.6" stroke-width="10"></circle>
+</svg>
+<span class="absolute font-numeric-display text-h1 text-secondary">85</span>
+</div>
+<div>
+<div class="flex items-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-sm" data-icon="trending_up">trending_up</span>
+<span class="text-label-caps">+3.2% from last month</span>
+</div>
+<p class="text-body-lg font-bold text-on-background">Excellent Standing</p>
+<p class="text-body-sm text-slate-500">Top 15% of peers in your bracket.</p>
+</div>
+</div>
+<div class="mt-8">
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-semibold hover:opacity-90 transition-opacity flex items-center gap-2">
+                                View Detailed Report
+                                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Summary Cards Column -->
+<div class="flex flex-col gap-4">
+<!-- Total Income -->
+<div class="bg-white rounded-xl border border-slate-200 p-md shadow-[0px_4px_12px_rgba(15,76,129,0.05)] flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<div>
+<p class="text-label-caps text-slate-500">TOTAL INCOME</p>
+<p class="font-numeric-display text-h3 text-on-background">$12,450.00</p>
+</div>
+</div>
+<!-- Total Expenses -->
+<div class="bg-white rounded-xl border border-slate-200 p-md shadow-[0px_4px_12px_rgba(15,76,129,0.05)] flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div>
+<p class="text-label-caps text-slate-500">TOTAL EXPENSES</p>
+<p class="font-numeric-display text-h3 text-on-background">$4,820.35</p>
+</div>
+</div>
+<!-- Total Savings -->
+<div class="bg-white rounded-xl border border-slate-200 p-md shadow-[0px_4px_12px_rgba(15,76,129,0.05)] flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="savings">savings</span>
+</div>
+<div>
+<p class="text-label-caps text-slate-500">TOTAL SAVINGS</p>
+<p class="font-numeric-display text-h3 text-on-background">$7,629.65</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Charts Section: Bento Grid Layout -->
+<section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-gutter">
+<!-- Spending Trends: Line Chart Representation -->
+<div class="xl:col-span-2 bg-white rounded-xl border border-slate-200 p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)]">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="font-h3 text-h3 text-primary">Spending Trends</h3>
+<p class="text-body-sm text-slate-500">Monthly breakdown over the last 6 months</p>
+</div>
+<select class="bg-slate-50 border-none rounded-lg text-body-sm px-4 py-2 focus:ring-0">
+<option>Last 6 Months</option>
+<option>Year to Date</option>
+</select>
+</div>
+<div class="h-64 flex items-end gap-2 relative">
+<!-- Mockup Line Chart using CSS shapes -->
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 400 100">
+<path d="M0,80 Q50,70 100,85 T200,60 T300,40 T400,50" fill="none" stroke="#00355f" stroke-width="3"></path>
+<path d="M0,80 Q50,70 100,85 T200,60 T300,40 T400,50 L400,100 L0,100 Z" fill="url(#gradient)" opacity="0.1"></path>
+<defs>
+<lineargradient id="gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#00355f;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#00355f;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Grid lines labels -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20">
+<div class="border-t border-slate-400 w-full"></div>
+<div class="border-t border-slate-400 w-full"></div>
+<div class="border-t border-slate-400 w-full"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-label-caps text-slate-400 px-2">
+<span>JAN</span><span>FEB</span><span>MAR</span><span>APR</span><span>MAY</span><span>JUN</span>
+</div>
+</div>
+<!-- Expense Categories: Pie/Donut Chart Representation -->
+<div class="bg-white rounded-xl border border-slate-200 p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)]">
+<h3 class="font-h3 text-h3 text-primary mb-1">Expense Allocation</h3>
+<p class="text-body-sm text-slate-500 mb-8">Top categories this month</p>
+<div class="relative w-48 h-48 mx-auto mb-8 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#e2e8f0" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#00355f" stroke-dasharray="45 100" stroke-dashoffset="0" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#006c49" stroke-dasharray="25 100" stroke-dashoffset="-45" stroke-width="4"></circle>
+<circle cx="18" cy="18" fill="transparent" r="16" stroke="#ba1a1a" stroke-dasharray="15 100" stroke-dashoffset="-70" stroke-width="4"></circle>
+</svg>
+<div class="absolute text-center">
+<p class="text-label-caps text-slate-500">TOTAL</p>
+<p class="font-bold text-on-background">$4.8k</p>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span>Housing</span>
+</div>
+<span class="font-bold">45%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Food</span>
+</div>
+<span class="font-bold">25%</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Transport</span>
+</div>
+<span class="font-bold">15%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Intelligence Insights Section -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-h2 text-h2 text-primary">Intelligence Insights</h2>
+<button class="text-primary font-semibold text-body-sm hover:underline">View All</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Overspending Insight -->
+<div class="bg-white rounded-xl border border-slate-200 p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)] border-l-4 border-l-error">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error shrink-0">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-lg text-error mb-1">Overspending Alert</h4>
+<p class="text-body-sm text-slate-600 mb-4">You are currently 22% over your budget for 'Dining Out' this month. Consider cutting back for the next 7 days.</p>
+<a class="text-primary font-bold text-label-caps hover:underline" href="#">REDUCE BUDGET</a>
+</div>
+</div>
+</div>
+<!-- Savings Insight -->
+<div class="bg-white rounded-xl border border-slate-200 p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)] border-l-4 border-l-primary">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined" data-icon="trending_down">trending_down</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-lg text-primary mb-1">Savings Goal Warning</h4>
+<p class="text-body-sm text-slate-600 mb-4">Your current savings rate is 12%, which is below your recommended level of 20% for your goals.</p>
+<a class="text-primary font-bold text-label-caps hover:underline" href="#">ADJUST GOALS</a>
+</div>
+</div>
+</div>
+<!-- Optimization Insight -->
+<div class="bg-white rounded-xl border border-slate-200 p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)] border-l-4 border-l-secondary">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined" data-icon="tips_and_updates">tips_and_updates</span>
+</div>
+<div>
+<h4 class="font-h3 text-body-lg text-secondary mb-1">Tax Opportunity</h4>
+<p class="text-body-sm text-slate-600 mb-4">Moving $2,000 to your 401k before end of month could reduce your estimated tax liability by $440.</p>
+<a class="text-primary font-bold text-label-caps hover:underline" href="#">OPTIMIZE NOW</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Ask AI Floating Widget -->
+<div class="fixed bottom-8 right-8 z-50">
+<div class="group relative">
+<!-- FAB -->
+<button class="w-16 h-16 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform active:scale-95 group-hover:rotate-12">
+<span class="material-symbols-outlined text-3xl" data-icon="smart_toy">smart_toy</span>
+</button>
+<!-- Tooltip/Label -->
+<div class="absolute bottom-full right-0 mb-4 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+<div class="bg-white shadow-xl border border-slate-200 rounded-xl p-4 w-64">
+<p class="text-body-sm font-bold text-primary mb-1">Ask WealthIntel AI</p>
+<p class="text-body-sm text-slate-500">"How much can I spend on a vacation this summer?"</p>
+<div class="mt-3 h-8 bg-slate-50 rounded-lg flex items-center px-3 text-slate-400 text-xs italic">
+                            Click to chat...
+                        </div>
+</div>
+<div class="w-4 h-4 bg-white border-r border-b border-slate-200 rotate-45 absolute -bottom-2 right-6"></div>
+</div>
+</div>
+</div>
+<!-- Footer Spatial Pad -->
+<footer class="mt-auto py-8 px-8 border-t border-slate-100 flex items-center justify-between text-label-caps text-slate-400">
+<p>© 2024 WealthIntel. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Security</a>
+</div>
+</footer>
+</main>
+</body></html>

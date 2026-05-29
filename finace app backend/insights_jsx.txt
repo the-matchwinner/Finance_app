@@ -1,0 +1,216 @@
+<main className="p-lg max-w-[1200px] mx-auto">
+{/*  Header Section  */}
+<div className="flex justify-between items-end mb-xl">
+<div>
+<h2 className="font-headline-md text-headline-md text-on-surface mb-xs">Spending Analysis</h2>
+<p className="font-body-md text-body-md text-on-surface-variant">Intelligent breakdown of your capital allocation across all connected accounts.</p>
+</div>
+<div className="flex gap-sm">
+<button className="px-md py-sm bg-surface-container text-on-surface rounded-lg font-label-md flex items-center gap-2 hover:bg-surface-container-high transition-all">
+<span className="material-symbols-outlined text-base">calendar_today</span>
+                        Last 30 Days
+                    </button>
+<button className="px-md py-sm bg-primary text-on-primary rounded-lg font-label-md flex items-center gap-2 hover:opacity-90 transition-all bg-gradient-to-r from-emerald-600 to-emerald-700">
+<span className="material-symbols-outlined text-base">download</span>
+                        Export PDF
+                    </button>
+</div>
+</div>
+{/*  Bento Grid Layout  */}
+<div className="grid grid-cols-12 gap-gutter">
+{/*  Detailed Breakdown Section (Bar Charts)  */}
+<div className="col-span-8 intelligence-card flex flex-col gap-lg">
+<div className="flex justify-between items-center">
+<h3 className="font-headline-sm text-headline-sm">Category Comparison</h3>
+<div className="flex items-center gap-md">
+<div className="flex items-center gap-xs">
+<div className="w-3 h-3 bg-secondary rounded-full"></div>
+<span className="text-label-xs font-label-xs text-on-surface-variant">Last Month</span>
+</div>
+<div className="flex items-center gap-xs">
+<div className="w-3 h-3 bg-surface-variant rounded-full border border-outline-variant"></div>
+<span className="text-label-xs font-label-xs text-on-surface-variant">Previous</span>
+</div>
+</div>
+</div>
+<div className="flex flex-col gap-md">
+{/*  Bar Item: Housing  */}
+<div className="space-y-xs">
+<div className="flex justify-between text-label-md font-label-md">
+<span>Housing &amp; Utilities</span>
+<span className="text-on-surface">$2,450.00 <span className="text-on-surface-variant font-normal">vs $2,400.00</span></span>
+</div>
+<div className="h-4 w-full bg-surface-container-low rounded-full overflow-hidden flex">
+<div className="h-full bg-secondary" style="width: 72%"></div>
+<div className="h-full bg-surface-variant border-l border-white" style="width: 4%"></div>
+</div>
+</div>
+{/*  Bar Item: Food & Dining  */}
+<div className="space-y-xs">
+<div className="flex justify-between text-label-md font-label-md">
+<span>Food &amp; Dining</span>
+<span className="text-on-surface">$820.00 <span className="text-on-surface-variant font-normal">vs $950.00</span></span>
+</div>
+<div className="h-4 w-full bg-surface-container-low rounded-full overflow-hidden flex">
+<div className="h-full bg-secondary" style="width: 45%"></div>
+<div className="h-full bg-surface-variant border-l border-white" style="width: 10%"></div>
+</div>
+</div>
+{/*  Bar Item: Transportation  */}
+<div className="space-y-xs">
+<div className="flex justify-between text-label-md font-label-md">
+<span>Transportation</span>
+<span className="text-on-surface">$410.00 <span className="text-on-surface-variant font-normal">vs $380.00</span></span>
+</div>
+<div className="h-4 w-full bg-surface-container-low rounded-full overflow-hidden flex">
+<div className="h-full bg-secondary" style="width: 30%"></div>
+<div className="h-full bg-surface-variant border-l border-white" style="width: 5%"></div>
+</div>
+</div>
+{/*  Bar Item: Entertainment  */}
+<div className="space-y-xs">
+<div className="flex justify-between text-label-md font-label-md">
+<span>Entertainment</span>
+<span className="text-on-surface">$290.00 <span className="text-on-surface-variant font-normal">vs $120.00</span></span>
+</div>
+<div className="h-4 w-full bg-surface-container-low rounded-full overflow-hidden flex">
+<div className="h-full bg-secondary" style="width: 20%"></div>
+<div className="h-full bg-surface-variant border-l border-white" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</div>
+{/*  Trend Analysis Section  */}
+<div className="col-span-4 flex flex-col gap-gutter">
+<div className="intelligence-card flex-1">
+<div className="flex items-center justify-between mb-md">
+<h3 className="font-headline-sm text-headline-sm">Trend Analysis</h3>
+<span className="material-symbols-outlined text-outline">trending_up</span>
+</div>
+<div className="space-y-lg">
+<div className="flex items-center justify-between">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-error-container flex items-center justify-center">
+<span className="material-symbols-outlined text-on-error-container">arrow_upward</span>
+</div>
+<div>
+<p className="font-label-md text-label-md">Groceries</p>
+<p className="text-label-xs text-on-surface-variant">Weekly Avg</p>
+</div>
+</div>
+<span className="text-on-error-container font-bold">+12.4%</span>
+</div>
+<div className="flex items-center justify-between">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span className="material-symbols-outlined text-on-secondary-container">arrow_downward</span>
+</div>
+<div>
+<p className="font-label-md text-label-md">Subcription</p>
+<p className="text-label-xs text-on-surface-variant">Monthly Avg</p>
+</div>
+</div>
+<span className="text-on-secondary-container font-bold">-4.1%</span>
+</div>
+<div className="flex items-center justify-between">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center">
+<span className="material-symbols-outlined text-on-secondary-container">arrow_downward</span>
+</div>
+<div>
+<p className="font-label-md text-label-md">Shopping</p>
+<p className="text-label-xs text-on-surface-variant">Weekly Avg</p>
+</div>
+</div>
+<span className="text-on-secondary-container font-bold">-22.8%</span>
+</div>
+</div>
+</div>
+</div>
+{/*  Recommendations Section  */}
+<div className="col-span-12 intelligence-card bg-surface-container-lowest">
+<div className="flex items-start justify-between mb-lg">
+<div>
+<h3 className="font-headline-sm text-headline-sm mb-xs">Smart Recommendations</h3>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Automated insights based on your spending patterns and financial goals.</p>
+</div>
+<span className="px-sm py-xs bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-full text-label-xs font-label-md">3 New Actions</span>
+</div>
+<div className="grid grid-cols-3 gap-md">
+{/*  Warning Banner 1  */}
+<div className="p-md rounded-xl border border-error-container bg-error-container/20 flex flex-col gap-sm">
+<div className="flex items-center gap-sm text-on-error-container">
+<span className="material-symbols-outlined">warning</span>
+<span className="font-label-md text-label-md">Over-budget Alert</span>
+</div>
+<p className="text-body-sm font-body-sm text-on-surface">You've exceeded your "Dining Out" budget by $120. Consider opting for home-cooked meals this week.</p>
+<button className="mt-auto text-label-md font-label-md text-error self-start hover:underline">View Transactions</button>
+</div>
+{/*  Info Banner 2  */}
+<div className="p-md rounded-xl border border-secondary-container bg-secondary-container/20 flex flex-col gap-sm">
+<div className="flex items-center gap-sm text-on-secondary-container">
+<span className="material-symbols-outlined">savings</span>
+<span className="font-label-md text-label-md">Savings Opportunity</span>
+</div>
+<p className="text-body-sm font-body-sm text-on-surface">We found 2 unused subscriptions costing $45/mo. Cancelling them could save you $540 annually.</p>
+<button className="mt-auto text-label-md font-label-md text-secondary self-start hover:underline">Manage Subscriptions</button>
+</div>
+{/*  Action Banner 3  */}
+<div className="p-md rounded-xl border border-tertiary-fixed bg-tertiary-fixed/20 flex flex-col gap-sm">
+<div className="flex items-center gap-sm text-on-tertiary-fixed-variant">
+<span className="material-symbols-outlined">lightbulb</span>
+<span className="font-label-md text-label-md">Tax Efficiency</span>
+</div>
+<p className="text-body-sm font-body-sm text-on-surface">Your current 401k contribution is 4%. Increasing it to 6% will maximize your employer match.</p>
+<button className="mt-auto text-label-md font-label-md text-on-tertiary-container self-start hover:underline">Update Settings</button>
+</div>
+</div>
+</div>
+{/*  Secondary Data Row: Geographic & Temporal  */}
+<div className="col-span-5 intelligence-card">
+<h3 className="font-headline-sm text-headline-sm mb-md">Spending Locations</h3>
+<div className="relative h-48 rounded-lg overflow-hidden mb-md border border-outline-variant">
+<img className="w-full h-full object-cover" data-alt="clean minimal stylized digital map of a metropolitan area with subtle data point overlays in emerald green" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrKEgop1iwpglknQmaIK2D12nmlGkagUyjNHfx-4dUoTB_S2ZkgYFx0bKD-HcOuo48sGoNhv2a1CcRoHkUZ6VtvcM2FJmpHeEHh5tqBOXb06ee_FltC3Wov63KXYVN6tklHehNcqPeofARkHFw59mGfxmWlH58-r0gU8THNdmxqmEyzNTHczQ18ZRXb_sIY8x8usuoJJka6B6KMB7aRi0nuNDwI2rFa30kat0nEC-AtHDbSB8Jb_gKVIiCwGaTFKnuYrfQ0WeseAE"/>
+<div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+</div>
+<div className="space-y-sm">
+<div className="flex justify-between items-center text-label-md">
+<span className="flex items-center gap-sm"><span className="w-2 h-2 rounded-full bg-emerald-500"></span>Local Area</span>
+<span className="font-bold">64%</span>
+</div>
+<div className="flex justify-between items-center text-label-md">
+<span className="flex items-center gap-sm"><span className="w-2 h-2 rounded-full bg-blue-500"></span>Online</span>
+<span className="font-bold">28%</span>
+</div>
+<div className="flex justify-between items-center text-label-md">
+<span className="flex items-center gap-sm"><span className="w-2 h-2 rounded-full bg-amber-500"></span>International</span>
+<span className="font-bold">8%</span>
+</div>
+</div>
+</div>
+<div className="col-span-7 intelligence-card flex flex-col gap-md">
+<div className="flex justify-between items-center">
+<h3 className="font-headline-sm text-headline-sm">Spending Velocity</h3>
+<span className="text-label-xs font-label-xs text-on-surface-variant">Last 7 Days</span>
+</div>
+<div className="flex-1 flex items-end gap-base h-40">
+<div className="flex-1 bg-surface-container rounded-t-lg transition-all hover:bg-secondary-fixed h-[40%]"></div>
+<div className="flex-1 bg-surface-container rounded-t-lg transition-all hover:bg-secondary-fixed h-[65%]"></div>
+<div className="flex-1 bg-surface-container rounded-t-lg transition-all hover:bg-secondary-fixed h-[45%]"></div>
+<div className="flex-1 bg-surface-container rounded-t-lg transition-all hover:bg-secondary-fixed h-[90%]"></div>
+<div className="flex-1 bg-secondary rounded-t-lg h-[80%]"></div>
+<div className="flex-1 bg-surface-container rounded-t-lg transition-all hover:bg-secondary-fixed h-[35%]"></div>
+<div className="flex-1 bg-surface-container rounded-t-lg transition-all hover:bg-secondary-fixed h-[55%]"></div>
+</div>
+<div className="flex justify-between text-label-xs text-on-surface-variant border-t border-slate-100 pt-sm">
+<span>Mon</span>
+<span>Tue</span>
+<span>Wed</span>
+<span>Thu</span>
+<span>Fri</span>
+<span>Sat</span>
+<span>Sun</span>
+</div>
+</div>
+</div>
+</main>

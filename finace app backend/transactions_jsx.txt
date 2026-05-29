@@ -1,0 +1,173 @@
+<main className="ml-64 min-h-screen">
+<header className="flex justify-between items-center w-full px-6 h-16 sticky top-0 z-50 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-sm">
+<div className="flex items-center gap-4 flex-1">
+<div className="relative w-full max-w-md">
+<span className="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input className="w-full bg-surface-container-low border-none rounded-lg py-2 pl-10 pr-4 text-body-sm focus:ring-2 focus:ring-on-tertiary-container outline-none transition-all" placeholder="Search transactions, payees, or categories..." type="text"/>
+</div>
+</div>
+<div className="flex items-center gap-4">
+<button className="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span className="material-symbols-outlined">notifications</span>
+</button>
+<div className="h-8 w-8 rounded-full overflow-hidden border border-slate-200">
+<img alt="Profile" data-alt="close-up portrait of a professional man in his 30s with a clean haircut and neutral expression in soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEQZVaYowhshu5vHa2IHTh7EDB6Y83J0sgQewJEKWIhmMe-AnAjmJuDmBc2U0X1lqrowhIG-sC1y9sIfe4o7iY3Gan-wxYjHO2fbdr34_dBuez761MoYBi5jI4Dq4_n0h9f6kwr6k3tDE8f9AOcGLC53GNYtGgpc1DQxI-i1KYz_UcEppY9VAkvIh8y3doKqx8dfFCvh4tkLgJ9lr_WNO-sn957dwONGq9oyMWeYFfNZI2HZoLueMewcqdvoeFUxtuL1GxswtQyOo"/>
+</div>
+</div>
+</header>
+<div className="p-lg max-w-container-max mx-auto space-y-lg">
+<div className="flex flex-col md:flex-row md:items-end justify-between gap-md">
+<div>
+<h2 className="font-headline-md text-headline-md text-primary">Transaction History</h2>
+<p className="font-body-sm text-body-sm text-on-surface-variant">Review and manage your latest financial movements across all accounts.</p>
+</div>
+<div className="flex items-center gap-sm">
+<button className="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span className="material-symbols-outlined">calendar_today</span>
+<span>Date Range</span>
+</button>
+<button className="flex items-center gap-2 px-4 py-2 border border-outline-variant rounded-lg font-label-md text-label-md hover:bg-surface-container-low transition-colors">
+<span className="material-symbols-outlined">filter_list</span>
+<span>Filters</span>
+</button>
+<button className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-secondary to-on-secondary-container text-on-secondary rounded-lg font-label-md text-label-md shadow-sm active:scale-95 transition-all">
+<span className="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">file_download</span>
+<span>Export CSV</span>
+</button>
+</div>
+</div>
+<div className="intelligence-card bg-surface-container-lowest rounded-xl overflow-hidden border border-slate-200">
+<div className="overflow-x-auto">
+<table className="w-full text-left border-collapse">
+<thead>
+<tr className="border-b border-slate-100 bg-surface-container-low/50">
+<th className="p-md font-label-md text-label-md text-on-surface-variant">Date</th>
+<th className="p-md font-label-md text-label-md text-on-surface-variant">Description</th>
+<th className="p-md font-label-md text-label-md text-on-surface-variant">Category</th>
+<th className="p-md font-label-md text-label-md text-on-surface-variant text-right">Amount</th>
+<th className="p-md"></th>
+</tr>
+</thead>
+<tbody className="divide-y divide-slate-100">
+<tr className="hover:bg-slate-50 cursor-pointer group transition-colors">
+<td className="p-md font-body-sm text-body-sm text-on-surface-variant">Oct 24, 2023</td>
+<td className="p-md">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-tertiary-container">
+<span className="material-symbols-outlined">shopping_bag</span>
+</div>
+<div>
+<p className="font-label-md text-label-md text-primary">Apple Store Soho</p>
+<p className="text-[11px] text-on-surface-variant uppercase tracking-wider">Debit Card • ••42</p>
+</div>
+</div>
+</td>
+<td className="p-md">
+<span className="px-3 py-1 bg-surface-container rounded-full font-label-xs text-label-xs text-on-surface-variant">Technology</span>
+</td>
+<td className="p-md font-label-md text-label-md text-right text-error">-$1,299.00</td>
+<td className="p-md text-right">
+<span className="material-symbols-outlined text-slate-300 group-hover:text-slate-600 transition-colors">chevron_right</span>
+</td>
+</tr>
+<tr className="hover:bg-slate-50 cursor-pointer group transition-colors">
+<td className="p-md font-body-sm text-body-sm text-on-surface-variant">Oct 23, 2023</td>
+<td className="p-md">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span className="material-symbols-outlined">restaurant</span>
+</div>
+<div>
+<p className="font-label-md text-label-md text-primary">The Green Table</p>
+<p className="text-[11px] text-on-surface-variant uppercase tracking-wider">Credit Card • ••88</p>
+</div>
+</div>
+</td>
+<td className="p-md">
+<span className="px-3 py-1 bg-surface-container rounded-full font-label-xs text-label-xs text-on-surface-variant">Dining</span>
+</td>
+<td className="p-md font-label-md text-label-md text-right text-error">-$84.50</td>
+<td className="p-md text-right">
+<span className="material-symbols-outlined text-slate-300 group-hover:text-slate-600 transition-colors">chevron_right</span>
+</td>
+</tr>
+<tr className="hover:bg-slate-50 cursor-pointer group transition-colors bg-surface-container-low/20">
+<td className="p-md font-body-sm text-body-sm text-on-surface-variant">Oct 21, 2023</td>
+<td className="p-md">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary-container">
+<span className="material-symbols-outlined">payments</span>
+</div>
+<div>
+<p className="font-label-md text-label-md text-primary">Stripe Payout</p>
+<p className="text-[11px] text-on-surface-variant uppercase tracking-wider">Direct Deposit</p>
+</div>
+</div>
+</td>
+<td className="p-md">
+<span className="px-3 py-1 bg-secondary-container/30 text-on-secondary-container rounded-full font-label-xs text-label-xs">Income</span>
+</td>
+<td className="p-md font-label-md text-label-md text-right text-secondary">+$4,250.00</td>
+<td className="p-md text-right">
+<span className="material-symbols-outlined text-slate-300 group-hover:text-slate-600 transition-colors">chevron_right</span>
+</td>
+</tr>
+<tr className="hover:bg-slate-50 cursor-pointer group transition-colors">
+<td className="p-md font-body-sm text-body-sm text-on-surface-variant">Oct 20, 2023</td>
+<td className="p-md">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span className="material-symbols-outlined">commute</span>
+</div>
+<div>
+<p className="font-label-md text-label-md text-primary">Uber Trip</p>
+<p className="text-[11px] text-on-surface-variant uppercase tracking-wider">Debit Card • ••42</p>
+</div>
+</div>
+</td>
+<td className="p-md">
+<span className="px-3 py-1 bg-surface-container rounded-full font-label-xs text-label-xs text-on-surface-variant">Transport</span>
+</td>
+<td className="p-md font-label-md text-label-md text-right text-error">-$32.18</td>
+<td className="p-md text-right">
+<span className="material-symbols-outlined text-slate-300 group-hover:text-slate-600 transition-colors">chevron_right</span>
+</td>
+</tr>
+<tr className="hover:bg-slate-50 cursor-pointer group transition-colors">
+<td className="p-md font-body-sm text-body-sm text-on-surface-variant">Oct 19, 2023</td>
+<td className="p-md">
+<div className="flex items-center gap-sm">
+<div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-tertiary-container">
+<span className="material-symbols-outlined">subscriptions</span>
+</div>
+<div>
+<p className="font-label-md text-label-md text-primary">Netflix Premium</p>
+<p className="text-[11px] text-on-surface-variant uppercase tracking-wider">Recurring Bill</p>
+</div>
+</div>
+</td>
+<td className="p-md">
+<span className="px-3 py-1 bg-surface-container rounded-full font-label-xs text-label-xs text-on-surface-variant">Entertainment</span>
+</td>
+<td className="p-md font-label-md text-label-md text-right text-error">-$19.99</td>
+<td className="p-md text-right">
+<span className="material-symbols-outlined text-slate-300 group-hover:text-slate-600 transition-colors">chevron_right</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div className="p-md border-t border-slate-100 flex items-center justify-between">
+<p className="font-body-sm text-body-sm text-on-surface-variant">Showing 1-10 of 245 transactions</p>
+<div className="flex gap-2">
+<button className="px-3 py-1 border border-outline-variant rounded hover:bg-surface-container-low transition-colors disabled:opacity-50" disabled="">
+<span className="material-symbols-outlined">chevron_left</span>
+</button>
+<button className="px-3 py-1 border border-outline-variant rounded hover:bg-surface-container-low transition-colors">
+<span className="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>

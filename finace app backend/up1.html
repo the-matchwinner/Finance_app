@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WealthIntel - Connect Financial Data</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#121c2a",
+                    "primary-fixed": "#d2e4ff",
+                    "inverse-primary": "#a0c9ff",
+                    "outline-variant": "#c2c7d1",
+                    "surface-variant": "#d9e3f6",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d0dbed",
+                    "primary-container": "#0f4c81",
+                    "surface-container": "#e6eeff",
+                    "error": "#ba1a1a",
+                    "secondary": "#006c49",
+                    "surface-tint": "#2d6197",
+                    "secondary-fixed-dim": "#4edea3",
+                    "on-tertiary-fixed": "#410006",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#27313f",
+                    "surface-container-highest": "#d9e3f6",
+                    "on-tertiary-container": "#ffa09d",
+                    "on-primary-container": "#8ebdf9",
+                    "inverse-on-surface": "#eaf1ff",
+                    "primary": "#00355f",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#dee9fc",
+                    "on-surface-variant": "#42474f",
+                    "surface": "#f8f9ff",
+                    "surface-container-low": "#eff4ff",
+                    "tertiary-container": "#8c2127",
+                    "tertiary": "#6c0513",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#07497d",
+                    "secondary-fixed": "#6ffbbe",
+                    "tertiary-fixed": "#ffdad8",
+                    "surface-bright": "#f8f9ff",
+                    "error-container": "#ffdad6",
+                    "background": "#f8f9ff",
+                    "primary-fixed-dim": "#a0c9ff",
+                    "tertiary-fixed-dim": "#ffb3b0",
+                    "secondary-container": "#6cf8bb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#121c2a",
+                    "on-secondary-fixed-variant": "#005236",
+                    "on-tertiary-fixed-variant": "#881d24",
+                    "on-primary-fixed": "#001c37",
+                    "on-secondary-container": "#00714d",
+                    "outline": "#727780",
+                    "on-secondary-fixed": "#002113"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "24px",
+                    "max-width": "1280px",
+                    "xl": "32px",
+                    "sm": "8px",
+                    "gutter": "24px",
+                    "base": "4px",
+                    "xs": "4px",
+                    "margin": "40px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "numeric-display": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "label-caps": ["Inter"],
+                    "h3": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "numeric-display": ["28px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h3": ["20px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9ff;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<aside class="fixed left-0 top-0 h-screen w-64 border-r bg-white border-slate-200 shadow-[4px_0_12px_rgba(15,76,129,0.02)] flex flex-col h-full overflow-y-auto font-['Inter'] antialiased">
+<div class="text-2xl font-black text-blue-900 px-6 py-8">WealthIntel</div>
+<nav class="flex-1">
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-body-md">Dashboard</span>
+</div>
+<div class="bg-blue-50 text-blue-900 border-r-4 border-blue-900 font-semibold flex items-center gap-3 px-6 py-3 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">cloud_upload</span>
+<span class="font-body-md">Upload</span>
+</div>
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-body-md">Transactions</span>
+</div>
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">lightbulb</span>
+<span class="font-body-md">Insights</span>
+</div>
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">savings</span>
+<span class="font-body-md">Budget</span>
+</div>
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">flag</span>
+<span class="font-body-md">Goals</span>
+</div>
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">smart_toy</span>
+<span class="font-body-md">AI Assistant</span>
+</div>
+<div class="flex items-center gap-3 px-6 py-3 text-slate-500 hover:bg-slate-50 hover:text-blue-900 transition-all duration-200 ease-in-out cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-body-md">Settings</span>
+</div>
+</nav>
+<div class="px-6 py-8 border-t border-slate-100">
+<div class="flex items-center gap-3">
+<img alt="User avatar" class="w-10 h-10 rounded-full border border-slate-200" data-alt="Professional headshot of a businessman in a suit with a warm smile, high-quality corporate portrait photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZXHUgheyvH1H-WMyJFrvDDzNaD7phnJcNoUb8Kj-nYiqbx9mrqwfCg1Khe0mrl2x64THy3bib9Zb_piybI3lMGH0NoVJU9k2h3YCCRibNZslwLlAoRmwJoB5NIzr6cC2VYJLchzmAfm8XuZB--ZCdafitZhu-11txpdO8xL1p27Rs3YJuMb067z2bSj_VuEQricZE0HTYYrAEerbaXBu_EM_Oew7-LxXx0DSYT1J3qJF6brhLtcteSdZHRhoxp1m58zzUS51X4MY"/>
+<div>
+<p class="text-body-sm font-semibold text-blue-900">David Chen</p>
+<p class="text-[10px] text-slate-400 font-label-caps">PREMIUM PLAN</p>
+</div>
+</div>
+</div>
+</aside>
+<header class="fixed top-0 right-0 left-64 h-16 bg-white/80 backdrop-blur-md border-b border-slate-200 shadow-sm flex items-center justify-between px-8 z-30 font-['Inter'] text-sm font-medium">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-50 border-none rounded-lg text-body-sm focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Search insights..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 cursor-pointer hover:bg-slate-50 p-2 rounded-lg transition-colors">
+<span class="material-symbols-outlined text-slate-500">notifications</span>
+<span class="w-2 h-2 bg-error rounded-full -ml-3 mb-3"></span>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-2 text-blue-900">
+<span class="font-semibold">Upload Data</span>
+</div>
+</div>
+</header>
+<main class="ml-64 mt-16 p-xl max-w-screen-xl mx-auto">
+<div class="mb-xl">
+<h1 class="font-h1 text-h1 text-blue-900">Financial Data Input</h1>
+<p class="text-body-lg text-on-surface-variant mt-sm">Choose your preferred method to sync your wealth data with WealthIntel.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-xl">
+<section class="lg:col-span-7 space-y-gutter">
+<div class="bg-white rounded-xl border border-outline-variant p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)]">
+<div class="flex items-center justify-between mb-lg">
+<div>
+<h2 class="font-h2 text-h2 text-primary">Upload Bank Statement</h2>
+<p class="text-body-sm text-on-surface-variant">Manual import for PDF or CSV statements.</p>
+</div>
+<span class="material-symbols-outlined text-primary-container text-3xl">upload_file</span>
+</div>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-xl flex flex-col items-center justify-center bg-surface-container-lowest hover:border-primary-container transition-colors cursor-pointer group">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center mb-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">cloud_upload</span>
+</div>
+<p class="font-h3 text-h3 text-on-surface mb-xs">Drag and drop file here</p>
+<p class="text-body-sm text-on-surface-variant mb-lg">Supports PDF, CSV, and XLSX (Max 10MB)</p>
+<button class="px-xl py-3 bg-primary text-on-primary font-semibold rounded-lg hover:bg-primary-container transition-all shadow-sm">
+                            Browse Files
+                        </button>
+</div>
+<div class="mt-xl">
+<div class="flex items-center justify-between mb-sm">
+<span class="text-body-sm font-semibold text-primary">statement_june_2024.pdf</span>
+<span class="text-body-sm text-on-surface-variant">75% complete</span>
+</div>
+<div class="h-2 w-full bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-primary w-3/4 rounded-full"></div>
+</div>
+<p class="text-body-sm text-on-surface-variant mt-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">info</span>
+                            Parsing transactions... This usually takes less than 30 seconds.
+                        </p>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-lg border border-outline-variant flex items-start gap-md">
+<div class="bg-white p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">psychology</span>
+</div>
+<div>
+<h4 class="font-h3 text-h3 text-primary mb-xs">Intelligence Insight</h4>
+<p class="text-body-sm text-on-surface-variant mb-md">Our AI can now automatically categorize transactions from over 200+ different statement formats with 99.4% accuracy.</p>
+<a class="text-primary font-semibold text-body-sm flex items-center gap-1 hover:underline" href="#">
+                            Learn how we protect your data <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section class="lg:col-span-5 space-y-gutter">
+<div class="bg-white rounded-xl border border-outline-variant p-lg shadow-[0px_4px_12px_rgba(15,76,129,0.05)]">
+<div class="flex items-center justify-between mb-lg">
+<div>
+<h2 class="font-h2 text-h2 text-primary">Connect Bank Account</h2>
+<p class="text-body-sm text-on-surface-variant">Real-time synchronization via secure Plaid API.</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-3xl">account_balance</span>
+</div>
+<div class="space-y-md mb-xl">
+<div class="flex items-center justify-between p-md bg-surface-container-lowest border border-outline-variant rounded-xl">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center border border-blue-100">
+<span class="material-symbols-outlined text-blue-700">account_balance</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Chase Sapphire Checking</p>
+<p class="text-body-sm text-on-surface-variant">Active Sync</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-semibold">Success</span>
+</div>
+</div>
+<div class="flex items-center justify-between p-md bg-surface-container-lowest border border-outline-variant rounded-xl opacity-60">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center border border-slate-200">
+<span class="material-symbols-outlined text-slate-500">credit_card</span>
+</div>
+<div>
+<p class="font-semibold text-on-surface">Amex Gold Card</p>
+<p class="text-body-sm text-on-surface-variant">Not connected</p>
+</div>
+</div>
+<button class="text-primary font-semibold text-body-sm hover:underline">Link Now</button>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-bold rounded-xl hover:bg-primary-container transition-all shadow-md flex items-center justify-center gap-2 mb-lg">
+<span class="material-symbols-outlined">add</span>
+                        Connect New Bank Account
+                    </button>
+<div class="grid grid-cols-2 gap-sm pt-lg border-t border-outline-variant">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-label-caps">256-BIT ENCRYPTION</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="text-label-caps">SOC2 COMPLIANT</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">shield</span>
+<span class="text-label-caps">PLAID SECURED</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">privacy_tip</span>
+<span class="text-label-caps">GDPR COMPLIANT</span>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl border border-outline-variant overflow-hidden shadow-[0px_4px_12px_rgba(15,76,129,0.05)]">
+<div class="p-lg bg-slate-50 border-b border-outline-variant flex items-center justify-between">
+<h4 class="font-semibold text-primary">Connected Partners</h4>
+<span class="text-body-sm text-on-surface-variant">View all 200+</span>
+</div>
+<div class="p-lg grid grid-cols-4 gap-lg opacity-40 grayscale">
+<img class="h-6 w-auto object-contain mx-auto" data-alt="Official logo of a major commercial bank, minimal design on clean white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDek__c4E7PKnjFwvcBtaGKsx9k0pSjA_oPd9wrlhAdvYq-upADocKYexdHYGI_l70_ANl98jSftgZ4IA64Oi43jMBOI7zfUXl1RpB30mvd4IVD7jfneZNWqQ9NwhPEVgzMew-uk1MzB0v_UioziHnc4l9cJSbhKh5ay4a5PfClnmxKAE4FszmmGWFKfriUgWTrFugj1B4N8jLTCpTSowz433UAzJ_w5RcnsTTZLZ_enJadZ6GNU345hZdpaR253fSmxI3goUyBnuc"/>
+<img class="h-6 w-auto object-contain mx-auto" data-alt="Official logo of a global financial institution, clean minimalist branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZl4zqAQtfSs6n192fdSw8hvq4Y_TMf2hjV8XdiOjy_2v9SeB8Ezouaa0k_J-3U2yFpLSTXyQPNbK9idu0c__Bo7y22OSsdxnb9zQpKnaDDfaVSerB95F5aSjZsDztETLmpgwMYwTZmoJlCGavJVy6aMCtejWoeOV3KpafnfvFyrLk21GznhHFTNvFdpzDTpaRc6rlvBifSeWP0nLftsjYoe-TSIZ6mY2v9ZwSFnQtiO4U2oVQPIPIUHuBJnf66-VeyplPadOJ-5I"/>
+<img class="h-6 w-auto object-contain mx-auto" data-alt="Corporate logo of an investment bank, sophisticated finance brand identity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARQPAVSufQ19LkLlPqYG_ne3z74nBoWA-RAJSscVi3ydswkqemfd-FZy-1H89jZ-26ry4-am2peJm-Xu-N_gsODgB18oh_IBJ4ddMxyNyFtdA3JwsoFfLvWKQ6Dcfs04VRpO9LmYCB_ro7MHJ3Vd_mZsZSi2IJoKRXAi5bfWh2UOMCrxlt6DO6otgOtMKLpsUlxrfq7egc8ZyBmTIycOxRAipNc8ToybRlaFdP8o3spcS-_reVxkbwzaYP3WEZ_mT_fpX1gOQ3qe8"/>
+<img class="h-6 w-auto object-contain mx-auto" data-alt="Professional logo for a retail banking group, modern corporate graphic design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Af0_q7Wx8g2UhB4nS_0Y77Am1ll_2vlF75lQofrenUI_haGcQ0ehQFLZ_uc8_sLQndtWkzj0srwGvF2HH5il-ADL7mGMWuwo4Cenu0WZKRPKSb-V9J75z4YqN4TBia-nIDPaQj5LvVOhy9GyhC4RYma82gVYfhmCyQeP0FdJxwmwS4t7-kcmAwkWhfRpYjPRvEFQtacPdvSD4yuq5qrQjyvFWqmdp9-shs0Nz6Ao-aSi7vC7zcHpfuag5ka0eppnvuza-w0e7YQ"/>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="ml-64 py-lg border-t border-outline-variant bg-white mt-margin">
+<div class="max-w-screen-xl mx-auto px-xl flex items-center justify-between text-on-surface-variant text-body-sm">
+<div class="flex items-center gap-xl">
+<span>© 2024 WealthIntel Platform</span>
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 bg-secondary rounded-full"></div>
+<span class="font-medium text-secondary">System Online</span>
+</div>
+</div>
+</footer>
+</body></html>
