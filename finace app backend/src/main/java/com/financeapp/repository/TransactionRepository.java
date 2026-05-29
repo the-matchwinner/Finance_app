@@ -14,5 +14,9 @@ public interface TransactionRepository extends JpaRepository<Transaction, Long> 
     List<Transaction> findByUserOrderByDateDesc(User user);
     List<Transaction> findByUserAndDateBetween(User user, LocalDate start, LocalDate end);
     boolean existsByUserAndTitleAndAmountAndDate(User user, String title, Double amount, LocalDate date);
-    void deleteByUser(User user);
+    @org.springframework.transaction.annotation.Transactional
+    @org.springframework.data.jpa.repository.Modifying
+    @org.springframework.data.jpa.repository.Query("DELETE FROM Transaction t WHERE t.user = :user")
+    void deleteByUser(@org.springframework.data.repository.query.Param("user") User user);
+
 }

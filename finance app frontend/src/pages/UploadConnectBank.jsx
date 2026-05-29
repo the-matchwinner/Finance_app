@@ -333,35 +333,35 @@ export default function UploadConnectBank() {
       <main className="ml-64 p-5 lg:h-[calc(100vh-10px)] flex flex-col justify-start lg:justify-between overflow-y-auto lg:overflow-hidden max-w-screen-xl mx-auto">
         <div className="mb-3 shrink-0">
           <h1 className="text-3xl font-black text-blue-900 dark:text-blue-400 font-manrope">Financial Data Input</h1>
-          <p className="text-sm text-slate-500 dark:text-slate-400 mt-0.5">Choose your preferred method to sync your wealth data with IntelliVest.</p>
+          <p className="text-base text-slate-500 dark:text-slate-400 mt-0.5">Choose your preferred method to sync your wealth data with IntelliVest.</p>
         </div>
 
         {error && (
-          <div className="mb-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 text-red-700 dark:text-red-400 px-4 py-2.5 rounded-xl text-xs flex items-center gap-2 animate-fade-in shrink-0">
-            <span className="material-symbols-outlined text-red-500 text-sm">error</span>{error}
+          <div className="mb-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 text-red-700 dark:text-red-400 px-4 py-2.5 rounded-xl text-sm flex items-center gap-2 animate-fade-in shrink-0">
+            <span className="material-symbols-outlined text-red-500 text-base">error</span>{error}
           </div>
         )}
         {ocrError && (
-          <div className="mb-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 text-red-700 dark:text-red-400 px-4 py-2.5 rounded-xl text-xs flex items-center gap-2 animate-fade-in shrink-0">
-            <span className="material-symbols-outlined text-red-500 text-sm">error</span>{ocrError}
+          <div className="mb-3 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 text-red-700 dark:text-red-400 px-4 py-2.5 rounded-xl text-sm flex items-center gap-2 animate-fade-in shrink-0">
+            <span className="material-symbols-outlined text-red-500 text-base">error</span>{ocrError}
           </div>
         )}
         {cleared && (
-          <div className="mb-3 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900/50 text-green-700 dark:text-green-400 px-4 py-2.5 rounded-xl text-xs flex items-center gap-2 animate-fade-in shrink-0">
-            <span className="material-symbols-outlined text-sm">check_circle</span>All transaction data cleared successfully.
+          <div className="mb-3 bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900/50 text-green-700 dark:text-green-400 px-4 py-2.5 rounded-xl text-sm flex items-center gap-2 animate-fade-in shrink-0">
+            <span className="material-symbols-outlined text-base">check_circle</span>All transaction data cleared successfully.
           </div>
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 flex-1 min-h-0 items-stretch">
           {/* ── Left Column: Upload slot & OCR Scanner ── */}
-          <section className="lg:col-span-6 flex flex-col gap-4 h-full min-h-0">
+          <section className="lg:col-span-6 flex flex-col gap-4 h-full min-h-0 lg:overflow-y-auto pr-1">
             
             {/* statement upload */}
             <div className="bg-white dark:bg-[#0f172a] rounded-xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm flex flex-col justify-between min-h-0">
               <div className="flex items-center justify-between mb-3 shrink-0">
                 <div>
-                  <h2 className="text-base font-bold text-blue-900 dark:text-blue-400">Upload Bank Statement</h2>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400">Manual import for PDF, CSV, or HTML statements.</p>
+                  <h2 className="text-lg font-bold text-blue-900 dark:text-blue-400">Upload Bank Statement</h2>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Manual import for PDF, CSV, or HTML statements.</p>
                 </div>
                 <span className="material-symbols-outlined text-blue-300 dark:text-blue-600 text-2xl">upload_file</span>
               </div>
@@ -376,22 +376,22 @@ export default function UploadConnectBank() {
                 <div className="w-9 h-9 rounded-full bg-blue-50 dark:bg-blue-950/40 flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
                   <span className="material-symbols-outlined text-blue-900 dark:text-blue-450 text-xl">cloud_upload</span>
                 </div>
-                <p className="text-xs font-bold text-slate-850 dark:text-slate-200 text-center">Drag and drop statement here</p>
-                <p className="text-[9px] text-slate-400 dark:text-slate-500 text-center">PDF, CSV, HTML up to 10 MB</p>
+                <p className="text-sm font-bold text-slate-850 dark:text-slate-200 text-center">Drag and drop statement here</p>
+                <p className="text-xs text-slate-400 dark:text-slate-500 text-center">PDF, CSV, HTML up to 10 MB</p>
               </div>
 
               {/* Uploaded file info box */}
               {file && !loading && (
                 <div className="mt-2 flex items-center justify-between bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/40 rounded-lg px-3 py-1.5 shrink-0">
                   <div className="flex items-center gap-2">
-                    <span className="material-symbols-outlined text-blue-900 dark:text-blue-450 text-base">{fileIcon}</span>
+                    <span className="material-symbols-outlined text-blue-900 dark:text-blue-450 text-lg">{fileIcon}</span>
                     <div className="min-w-0">
-                      <p className="text-[10px] font-bold text-blue-900 dark:text-blue-400 truncate max-w-[160px]">{file.name}</p>
-                      <p className="text-[8px] text-slate-500">{(file.size / 1024).toFixed(1)} KB</p>
+                      <p className="text-xs font-bold text-blue-900 dark:text-blue-400 truncate max-w-[200px]">{file.name}</p>
+                      <p className="text-[10px] text-slate-500">{(file.size / 1024).toFixed(1)} KB</p>
                     </div>
                   </div>
                   <button onClick={handleClearFile}
-                    className="text-[9px] font-bold text-red-650 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 px-1.5 py-1 rounded">
+                    className="text-xs font-bold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 px-1.5 py-1 rounded">
                     Remove
                   </button>
                 </div>
@@ -401,10 +401,10 @@ export default function UploadConnectBank() {
               {loading && (
                 <div className="mt-2 shrink-0">
                   <div className="flex items-center justify-between mb-1">
-                    <span className="text-[10px] font-semibold text-blue-900 dark:text-blue-400 truncate max-w-[150px]">{file?.name}</span>
-                    <span className="text-[10px] text-slate-500">{progress}%</span>
+                    <span className="text-xs font-semibold text-blue-900 dark:text-blue-400 truncate max-w-[180px]">{file?.name}</span>
+                    <span className="text-xs text-slate-500">{progress}%</span>
                   </div>
-                  <div className="h-1 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                  <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
                     <div className="h-full bg-blue-900 dark:bg-blue-600 rounded-full transition-all duration-500" style={{ width: `${progress}%` }}></div>
                   </div>
                 </div>
@@ -413,8 +413,8 @@ export default function UploadConnectBank() {
               {/* Upload button */}
               {file && !loading && (
                 <button onClick={handleUpload}
-                  className="mt-2 w-full py-2 bg-blue-900 dark:bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 dark:hover:bg-blue-600 transition-all shadow-sm flex items-center justify-center gap-1 text-xs active:scale-[0.98] shrink-0">
-                  <span className="material-symbols-outlined text-sm">auto_awesome</span>
+                  className="mt-2 w-full py-2 bg-blue-900 dark:bg-blue-700 text-white font-bold rounded-lg hover:bg-blue-800 dark:hover:bg-blue-600 transition-all shadow-sm flex items-center justify-center gap-1 text-sm active:scale-[0.98] shrink-0">
+                  <span className="material-symbols-outlined text-base">auto_awesome</span>
                   Start AI Analysis
                 </button>
               )}
@@ -424,8 +424,8 @@ export default function UploadConnectBank() {
             <div className="bg-white dark:bg-[#0f172a] rounded-xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm flex flex-col justify-between min-h-0">
               <div className="flex items-center justify-between mb-3 shrink-0">
                 <div>
-                  <h2 className="text-base font-bold text-blue-900 dark:text-blue-400">AI Receipt OCR Scanner</h2>
-                  <p className="text-[10px] text-slate-500 dark:text-slate-400">Upload a receipt or invoice to parse details instantly.</p>
+                  <h2 className="text-lg font-bold text-blue-900 dark:text-blue-400">AI Receipt OCR Scanner</h2>
+                  <p className="text-xs text-slate-500 dark:text-slate-400">Upload a receipt or invoice to parse details instantly.</p>
                 </div>
                 <span className="material-symbols-outlined text-blue-300 dark:text-blue-600 text-2xl">receipt_long</span>
               </div>
@@ -438,59 +438,59 @@ export default function UploadConnectBank() {
                     <div className="w-9 h-9 rounded-full bg-blue-50 dark:bg-blue-950/40 flex items-center justify-center mb-1 group-hover:scale-105 transition-transform">
                       <span className="material-symbols-outlined text-blue-900 dark:text-blue-450 text-xl">camera_alt</span>
                     </div>
-                    <p className="text-xs font-bold text-slate-850 dark:text-slate-200 text-center">Upload Receipt Image / PDF</p>
-                    <p className="text-[9px] text-slate-400 dark:text-slate-500 text-center">Supports PNG, JPG, PDF</p>
+                    <p className="text-sm font-bold text-slate-850 dark:text-slate-200 text-center">Upload Receipt Image / PDF</p>
+                    <p className="text-xs text-slate-400 dark:text-slate-500 text-center">Supports PNG, JPG, PDF</p>
                   </div>
 
                   {ocrFile && (
                     <div className="mt-2 flex items-center justify-between bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100 dark:border-blue-900/40 rounded-lg px-3 py-1.5 shrink-0">
                       <div className="flex items-center gap-2">
-                        <span className="material-symbols-outlined text-blue-900 dark:text-blue-450 text-base">image</span>
-                        <span className="text-[10px] font-bold text-blue-900 dark:text-blue-400 truncate max-w-[160px]">{ocrFile.name}</span>
+                        <span className="material-symbols-outlined text-blue-900 dark:text-blue-450 text-lg">image</span>
+                        <span className="text-xs font-bold text-blue-900 dark:text-blue-400 truncate max-w-[200px]">{ocrFile.name}</span>
                       </div>
-                      <button onClick={() => setOcrFile(null)} className="text-[9px] font-bold text-red-650 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 px-1.5 py-1 rounded">Remove</button>
+                      <button onClick={() => setOcrFile(null)} className="text-xs font-bold text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-950/20 px-1.5 py-1 rounded">Remove</button>
                     </div>
                   )}
 
                   {ocrFile && !ocrLoading && (
-                    <button onClick={handleOcrUpload} className="mt-2 w-full py-2 bg-blue-900 dark:bg-blue-700 text-white font-bold rounded-lg text-xs hover:bg-blue-800 dark:hover:bg-blue-600 transition-colors shadow-sm shrink-0">
+                    <button onClick={handleOcrUpload} className="mt-2 w-full py-2 bg-blue-900 dark:bg-blue-700 text-white font-bold rounded-lg text-sm hover:bg-blue-800 dark:hover:bg-blue-600 transition-colors shadow-sm shrink-0">
                       Scan Receipt with AI
                     </button>
                   )}
 
                   {ocrLoading && (
-                    <div className="mt-2 text-center py-4 text-slate-400 dark:text-slate-500 text-xs flex items-center justify-center gap-2 shrink-0">
-                      <span className="material-symbols-outlined animate-spin text-sm">sync</span>
+                    <div className="mt-2 text-center py-4 text-slate-400 dark:text-slate-500 text-sm flex items-center justify-center gap-2 shrink-0">
+                      <span className="material-symbols-outlined animate-spin text-base">sync</span>
                       <span>Parsing receipt layout...</span>
                     </div>
                   )}
                 </div>
               ) : (
                 <div className="flex-1 flex flex-col justify-between min-h-0 space-y-2">
-                  <div className="space-y-2 bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-100 dark:border-slate-800 text-xs flex-1 overflow-y-auto">
-                    <p className="text-[10px] font-bold text-blue-900 dark:text-blue-400 uppercase tracking-wider mb-1 flex items-center gap-1">
+                  <div className="space-y-2 bg-slate-50 dark:bg-slate-900/60 p-3 rounded-lg border border-slate-100 dark:border-slate-800 text-sm flex-1 overflow-y-auto">
+                    <p className="text-xs font-bold text-blue-900 dark:text-blue-400 uppercase tracking-wider mb-1 flex items-center gap-1">
                       <span className="material-symbols-outlined text-xs">auto_awesome</span> Verify OCR Scan Results
                     </p>
                     <div className="grid grid-cols-2 gap-2">
                       <div>
-                        <label className="text-[9px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Merchant</label>
+                        <label className="text-[11px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Merchant</label>
                         <input type="text" value={ocrResult.title} onChange={e => handleOcrFieldChange('title', e.target.value)}
                           className="w-full bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded px-2 py-1 text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-blue-800" />
                       </div>
                       <div>
-                        <label className="text-[9px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Amount (₹)</label>
+                        <label className="text-[11px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Amount (₹)</label>
                         <input type="number" value={ocrResult.amount} onChange={e => handleOcrFieldChange('amount', Number(e.target.value))}
                           className="w-full bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded px-2 py-1 text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-blue-800" />
                       </div>
                     </div>
                     <div className="grid grid-cols-2 gap-2">
                       <div>
-                        <label className="text-[9px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Date</label>
+                        <label className="text-[11px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Date</label>
                         <input type="date" value={ocrResult.date} onChange={e => handleOcrFieldChange('date', e.target.value)}
                           className="w-full bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded px-2 py-1 text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-blue-800" />
                       </div>
                       <div>
-                        <label className="text-[9px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Category</label>
+                        <label className="text-[11px] text-slate-400 dark:text-slate-500 uppercase font-bold block mb-0.5">Category</label>
                         <input type="text" value={ocrResult.category} onChange={e => handleOcrFieldChange('category', e.target.value)}
                           className="w-full bg-white dark:bg-[#0f172a] border border-slate-200 dark:border-slate-800 rounded px-2 py-1 text-slate-900 dark:text-slate-100 outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-blue-800" />
                       </div>
@@ -498,9 +498,9 @@ export default function UploadConnectBank() {
                   </div>
 
                   <div className="flex gap-2 shrink-0">
-                    <button onClick={() => setOcrResult(null)} className="flex-1 py-1.5 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 rounded-lg text-xs hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">Discard</button>
-                    <button onClick={handleOcrConfirm} disabled={ocrSaving} className="flex-1 py-1.5 bg-green-700 dark:bg-green-600 hover:bg-green-800 dark:hover:bg-green-550 text-white font-bold rounded-lg text-xs flex items-center justify-center gap-1 transition-colors">
-                      {ocrSaving ? <span className="material-symbols-outlined animate-spin text-[10px]">sync</span> : <span className="material-symbols-outlined text-[10px]">check</span>}
+                    <button onClick={() => setOcrResult(null)} className="flex-1 py-1.5 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-400 rounded-lg text-sm hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors">Discard</button>
+                    <button onClick={handleOcrConfirm} disabled={ocrSaving} className="flex-1 py-1.5 bg-green-700 dark:bg-green-600 hover:bg-green-800 dark:hover:bg-green-550 text-white font-bold rounded-lg text-sm flex items-center justify-center gap-1 transition-colors">
+                      {ocrSaving ? <span className="material-symbols-outlined animate-spin text-xs">sync</span> : <span className="material-symbols-outlined text-xs">check</span>}
                       Confirm & Add
                     </button>
                   </div>
@@ -508,8 +508,8 @@ export default function UploadConnectBank() {
               )}
 
               {ocrSuccess && (
-                <p className="text-[10px] text-green-600 dark:text-green-400 font-bold mt-1 text-center animate-pulse flex items-center justify-center gap-1 shrink-0">
-                  <span className="material-symbols-outlined text-xs">check_circle</span> Transaction saved to ledger successfully!
+                <p className="text-xs text-green-600 dark:text-green-400 font-bold mt-1 text-center animate-pulse flex items-center justify-center gap-1 shrink-0">
+                  <span className="material-symbols-outlined text-sm">check_circle</span> Transaction saved to ledger successfully!
                 </p>
               )}
             </div>
@@ -517,32 +517,32 @@ export default function UploadConnectBank() {
             {/* Clear All banner */}
             <div className="bg-red-50/50 dark:bg-red-950/10 border border-red-100 dark:border-red-900/50 rounded-xl p-3 flex items-center justify-between gap-3 shadow-sm shrink-0">
               <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-lg bg-red-100 dark:bg-red-950 flex items-center justify-center text-red-750 shrink-0">
-                  <span className="material-symbols-outlined text-base">delete_sweep</span>
+                <div className="w-7 h-7 rounded-lg bg-red-100 dark:bg-red-950 flex items-center justify-center text-red-600 shrink-0">
+                  <span className="material-symbols-outlined text-lg">delete_sweep</span>
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-red-800 dark:text-red-400">Clear All Transaction Data</h4>
-                  <p className="text-[9px] text-slate-500 dark:text-slate-450">Remove all statements to start fresh.</p>
+                  <h4 className="text-sm font-bold text-red-800 dark:text-red-400">Clear All Transaction Data</h4>
+                  <p className="text-xs text-slate-500 dark:text-slate-450">Remove all statements to start fresh.</p>
                 </div>
               </div>
               <button onClick={handleClearData} disabled={clearing}
-                className="flex items-center gap-1 px-3 py-1.5 bg-red-650 hover:bg-red-700 text-white rounded-lg text-xs font-bold transition-colors disabled:opacity-50 shrink-0">
-                {clearing ? <span className="material-symbols-outlined animate-spin text-xs">sync</span> : <span className="material-symbols-outlined text-xs">delete</span>}
+                className="flex items-center gap-1 px-3 py-1.5 bg-red-600 hover:bg-red-700 text-white rounded-lg text-sm font-bold transition-colors disabled:opacity-50 shrink-0">
+                {clearing ? <span className="material-symbols-outlined animate-spin text-sm">sync</span> : <span className="material-symbols-outlined text-sm">delete</span>}
                 {clearing ? 'Clearing…' : 'Clear Data'}
               </button>
             </div>
           </section>
 
           {/* ── Right Column: Linked Bank Accounts & UPI apps (Tabbed) ── */}
-          <section className="lg:col-span-6 h-full min-h-0">
+          <section className="lg:col-span-6 h-full min-h-0 lg:overflow-y-auto pr-1">
             <div className="bg-white dark:bg-[#0f172a] rounded-xl border border-slate-200 dark:border-slate-800 p-4 shadow-sm h-full flex flex-col justify-between min-h-0">
               
               <div className="flex-1 flex flex-col min-h-0">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-3 shrink-0">
                   <div>
-                    <h2 className="text-base font-bold text-blue-900 dark:text-blue-400">Synchronize Accounts</h2>
-                    <p className="text-[10px] text-slate-500 dark:text-slate-400">Connect secure bank statements or UPI apps.</p>
+                    <h2 className="text-lg font-bold text-blue-900 dark:text-blue-400">Synchronize Accounts</h2>
+                    <p className="text-xs text-slate-500 dark:text-slate-400">Connect secure bank statements or UPI apps.</p>
                   </div>
                   <span className="material-symbols-outlined text-green-600 dark:text-green-500 text-2xl">account_balance</span>
                 </div>
@@ -551,7 +551,7 @@ export default function UploadConnectBank() {
                 <div className="flex border-b border-slate-100 dark:border-slate-800 mb-3 bg-slate-50/50 dark:bg-slate-900/50 p-1 rounded-lg shrink-0">
                   <button 
                     onClick={() => setActiveTab('banks')}
-                    className={`flex-1 py-1.5 text-center text-xs font-bold rounded-md transition-all flex items-center justify-center gap-1.5 ${
+                    className={`flex-1 py-1.5 text-center text-sm font-bold rounded-md transition-all flex items-center justify-center gap-1.5 ${
                       activeTab === 'banks' 
                         ? 'bg-white dark:bg-[#1e293b] text-blue-900 dark:text-blue-400 shadow-sm border border-slate-200/50 dark:border-slate-700/50' 
                         : 'text-slate-500 hover:text-slate-800 dark:hover:text-slate-350'
@@ -562,7 +562,7 @@ export default function UploadConnectBank() {
                   </button>
                   <button 
                     onClick={() => setActiveTab('upi')}
-                    className={`flex-1 py-1.5 text-center text-xs font-bold rounded-md transition-all flex items-center justify-center gap-1.5 ${
+                    className={`flex-1 py-1.5 text-center text-sm font-bold rounded-md transition-all flex items-center justify-center gap-1.5 ${
                       activeTab === 'upi' 
                         ? 'bg-white dark:bg-[#1e293b] text-emerald-800 dark:text-emerald-450 shadow-sm border border-slate-200/50 dark:border-slate-700/50' 
                         : 'text-slate-500 hover:text-slate-850'
@@ -591,8 +591,8 @@ export default function UploadConnectBank() {
                             <span className="material-symbols-outlined text-sm">{b.icon}</span>
                           </div>
                           <div>
-                            <p className="text-xs font-semibold text-slate-800 dark:text-slate-200">{b.name}</p>
-                            <p className="text-[9px] text-slate-400 dark:text-slate-500">
+                            <p className="text-sm font-semibold text-slate-800 dark:text-slate-200">{b.name}</p>
+                            <p className="text-xs text-slate-400 dark:text-slate-500">
                               {isConnected ? `Linked (${dbConn.accountNumber})` : 'Not linked'}
                             </p>
                           </div>
@@ -600,8 +600,8 @@ export default function UploadConnectBank() {
 
                         {isConnected ? (
                           <div className="flex items-center gap-1.5">
-                            <div className="flex items-center gap-0.5 px-2 py-0.5 bg-green-50 dark:bg-green-950/40 text-green-700 dark:text-green-400 rounded-full text-[8px] font-bold">
-                              <span className="material-symbols-outlined text-[10px]" style={{ fontVariationSettings: '"FILL" 1' }}>check_circle</span>
+                            <div className="flex items-center gap-0.5 px-2 py-0.5 bg-green-50 dark:bg-green-950/40 text-green-700 dark:text-green-400 rounded-full text-[10px] font-bold">
+                              <span className="material-symbols-outlined text-xs" style={{ fontVariationSettings: '"FILL" 1' }}>check_circle</span>
                               Linked
                             </div>
                             <button
@@ -609,13 +609,13 @@ export default function UploadConnectBank() {
                               className="text-red-500 hover:text-red-700 dark:hover:text-red-400 p-1 rounded hover:bg-red-50 dark:hover:bg-red-950/20 transition-colors flex items-center justify-center"
                               title="Disconnect Integration"
                             >
-                              <span className="material-symbols-outlined text-[10px] font-bold">logout</span>
+                              <span className="material-symbols-outlined text-xs font-bold">logout</span>
                             </button>
                           </div>
                         ) : (
                           <button
                             onClick={() => openLinkModal(b.id, activeTab === 'upi')}
-                            className={`text-xs font-bold hover:underline ${
+                            className={`text-sm font-bold hover:underline ${
                               activeTab === 'upi' ? 'text-emerald-800 dark:text-emerald-450 hover:text-emerald-600' : 'text-blue-900 dark:text-blue-400 hover:text-blue-700'
                             }`}
                           >
@@ -633,17 +633,17 @@ export default function UploadConnectBank() {
                 {activeTab === 'banks' ? (
                   <button
                     onClick={handleConnectSetu}
-                    className="w-full py-2 bg-blue-900 dark:bg-blue-700 hover:bg-blue-800 dark:hover:bg-blue-600 text-white font-bold rounded-lg transition-all shadow-sm flex items-center justify-center gap-1 text-xs active:scale-[0.98] mb-2"
+                    className="w-full py-2 bg-blue-900 dark:bg-blue-700 hover:bg-blue-800 dark:hover:bg-blue-600 text-white font-bold rounded-lg transition-all shadow-sm flex items-center justify-center gap-1 text-sm active:scale-[0.98] mb-2"
                   >
-                    <span className="material-symbols-outlined text-sm">sync</span>
+                    <span className="material-symbols-outlined text-base">sync</span>
                     Connect Indian Banks via Setu AA
                   </button>
                 ) : (
                   <button
                     onClick={() => openLinkModal(null, true)}
-                    className="w-full py-2 bg-emerald-800 dark:bg-emerald-700 hover:bg-emerald-700 dark:hover:bg-emerald-600 text-white font-bold rounded-lg transition-all shadow-sm flex items-center justify-center gap-1 text-xs active:scale-[0.98] mb-2"
+                    className="w-full py-2 bg-emerald-800 dark:bg-emerald-700 hover:bg-emerald-700 dark:hover:bg-emerald-600 text-white font-bold rounded-lg transition-all shadow-sm flex items-center justify-center gap-1 text-sm active:scale-[0.98] mb-2"
                   >
-                    <span className="material-symbols-outlined text-sm">add</span>
+                    <span className="material-symbols-outlined text-base">add</span>
                     Link UPI Platform (Demo Simulation)
                   </button>
                 )}
@@ -658,12 +658,11 @@ export default function UploadConnectBank() {
                   ].map(([icon, label]) => (
                     <div key={label} className="flex flex-col items-center justify-center opacity-80">
                       <span className="material-symbols-outlined text-xs mb-0.5">{icon}</span>
-                      <span className="text-[7px] font-bold tracking-wider font-mono">{label}</span>
+                      <span className="text-[9px] font-bold tracking-wider font-mono">{label}</span>
                     </div>
                   ))}
                 </div>
               </div>
-
             </div>
           </section>
         </div>
