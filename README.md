@@ -124,14 +124,16 @@ The application expects a local PostgreSQL server running on port **5432** with 
    ```bash
    cd "finace app backend"
    ```
-2. Grant execution permissions on the Maven wrapper:
-   ```bash
-   chmod +x mvnw
-   ```
-3. Start the application:
-   ```bash
-   ./mvnw spring-boot:run
-   ```
+2. Start the application:
+   * **macOS / Linux**:
+     ```bash
+     chmod +x mvnw
+     ./mvnw spring-boot:run
+     ```
+   * **Windows** (CMD / PowerShell):
+     ```cmd
+     mvnw.cmd spring-boot:run
+     ```
    The backend API will start on **`http://localhost:8081`**.
 
 ---
@@ -142,10 +144,16 @@ The application expects a local PostgreSQL server running on port **5432** with 
    cd "finace app backend/ml-engine"
    ```
 2. Create and activate a virtual environment:
-   ```bash
-   python3 -m venv venv
-   source venv/bin/activate
-   ```
+   * **macOS / Linux**:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+   * **Windows** (CMD / PowerShell):
+     ```cmd
+     python -m venv venv
+     venv\Scripts\activate
+     ```
 3. Install dependencies:
    ```bash
    pip install -r requirements.txt
