@@ -2,8 +2,8 @@
 
 An AI-powered financial intelligence platform designed to help users transition from passive budgeting to active wealth generation. The app tracks spending, monitors recurring subscriptions, scans receipts using AI OCR, forecasts savings paths against goal timelines, and dynamically rebalances budget recommendations based on real-time stock market volatility.
 
-[![Watch Tech Stack Mechanism Video](https://img.shields.io/badge/Watch%20Architecture%20%26%20Tech%20Stack-Google%20Drive-blue?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/19HLmPBheieFhI4ElTEP_CN3w4zduWBwV/view?usp=sharing)
-> 🎥 **[Click here to watch the video detailing the backend mechanisms and architecture flow of the tech stack](https://drive.google.com/file/d/19HLmPBheieFhI4ElTEP_CN3w4zduWBwV/view?usp=sharing).**
+[![View Tech Stack Architecture PDF](https://img.shields.io/badge/View%20Architecture%20%26%20Tech%20Stack-Google%20Drive-blue?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/19HLmPBheieFhI4ElTEP_CN3w4zduWBwV/view?usp=sharing)
+> 📄 **[Click here to view the PDF document detailing the backend mechanisms and architecture flow of the tech stack](https://drive.google.com/file/d/19HLmPBheieFhI4ElTEP_CN3w4zduWBwV/view?usp=sharing).**
 
 ---
 
