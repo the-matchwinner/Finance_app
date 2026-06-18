@@ -95,6 +95,28 @@ The application expects a local PostgreSQL server running on port **5432** with 
    psql -d postgres -c "CREATE DATABASE finance_db OWNER postgres;"
    ```
 
+#### Setup commands (Windows):
+1. **Install PostgreSQL**:
+   * **Option A**: Download and run the graphical installer from the [Official PostgreSQL Downloads Page](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads). During installation:
+     * Set the password for the default `postgres` user to `database`.
+     * Keep the port as the default `5432`.
+   * **Option B**: Use Windows Package Manager (`winget`) in CMD/PowerShell:
+     ```cmd
+     winget install PostgreSQL.PostgreSQL
+     ```
+2. **Start the database service**:
+   The installer automatically starts PostgreSQL as a Windows Service. If you need to start it manually, open Command Prompt as Administrator and run:
+   ```cmd
+   net start postgresql-x64-16
+   ```
+   *(Note: Replace `16` with your installed major version).*
+3. **Create the Database**:
+   Open **SQL Shell (psql)** from the Windows Start menu or run inside Command Prompt:
+   ```cmd
+   psql -U postgres -c "CREATE DATABASE finance_db OWNER postgres;"
+   ```
+   *(Enter the password `database` when prompted).*
+
 ---
 
 ### 3. Run the Spring Boot Backend
