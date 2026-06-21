@@ -1,4 +1,4 @@
-# Finance App: Active Financial Intelligence Platform
+# IntelliVest: Active Financial Intelligence Platform
 
 An AI-powered financial intelligence platform designed to help users transition from passive budgeting to active wealth generation. The app tracks spending, monitors recurring subscriptions, scans receipts using AI OCR, forecasts savings paths against goal timelines, and dynamically rebalances budget recommendations based on real-time stock market volatility.
 
