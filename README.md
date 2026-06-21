@@ -1,9 +1,48 @@
 # IntelliVest: Active Financial Intelligence Platform
 
+![React](https://img.shields.io/badge/React-Frontend-blue)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-Backend-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+![Python](https://img.shields.io/badge/Python-ML-yellow)
+
 An AI-powered financial intelligence platform designed to help users transition from passive budgeting to active wealth generation. The app tracks spending, monitors recurring subscriptions, scans receipts using AI OCR, forecasts savings paths against goal timelines, and dynamically rebalances budget recommendations based on real-time stock market volatility.
+
+## Screenshots & Architecture
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Insights
+![Insights](screenshots/insights.png)
+
+### Goals
+![Goals](screenshots/goals.png)
+
+### Login Page
+![Login](screenshots/login.png)
+
+### Architecture Diagram
+![Architecture Diagram](screenshots/architecture.png)
 
 [![View Tech Stack Architecture PDF](https://img.shields.io/badge/View%20Architecture%20%26%20Tech%20Stack-Google%20Drive-blue?style=for-the-badge&logo=googledrive)](https://drive.google.com/file/d/1pHtf0zgm3v2Btx-V-Eqan_y1krGG5pn5/view?usp=sharing)
 > 📄 **[Click here to view the PDF document detailing the backend mechanisms and architecture flow of the tech stack](https://drive.google.com/file/d/1pHtf0zgm3v2Btx-V-Eqan_y1krGG5pn5/view?usp=sharing).**
+
+---
+
+## Project Status
+Under Active Development
+
+Completed:
+- Authentication
+- Dashboard
+- Budget Planner
+- Goals Module
+- OCR Pipeline
+
+Planned:
+- Real Bank Integration
+- Portfolio Tracking
+- Advanced ML Recommendations
 
 ---
 
