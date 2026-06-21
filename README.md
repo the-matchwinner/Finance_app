@@ -40,7 +40,10 @@ Completed:
 - OCR Pipeline
 
 Planned:
-- Real Bank Integration
+- OTP Verification
+- Real Bank/UPI Integration (current stutus - Sandbox Simulation (Mock Data))
+- Live Market Analysis      (current status - Basic Market Data Integration)
+- AI Assistant
 - Portfolio Tracking
 - Advanced ML Recommendations
 
