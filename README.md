@@ -5,7 +5,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
 ![Python](https://img.shields.io/badge/Python-ML-yellow)
 
-An AI-powered financial intelligence platform designed to help users transition from passive budgeting to active wealth generation. The app tracks spending, monitors recurring subscriptions, scans receipts using AI OCR, forecasts savings paths against goal timelines, and dynamically rebalances budget recommendations based on real-time stock market volatility.
+An AI-powered financial intelligence platform designed to help users transition from passive budgeting to active wealth generation. The app tracks spending, monitors recurring subscriptions, scans receipts using AI OCR, forecasts savings paths against goal timelines, and dynamically rebalances budget recommendations using market trend and volatility insights.
 
 ## Screenshots & Architecture
 
@@ -29,21 +29,36 @@ An AI-powered financial intelligence platform designed to help users transition 
 
 ---
 
-## Project Status
-Under Active Development
+## Key Features
 
-Completed:
-- Authentication
-- Dashboard
+- Financial Health Score
+- Budget Planning & Rebalancing
+- Goal Tracking & Savings Forecasting
+- AI OCR Receipt Scanner
+- Subscription Detection
+- Market-Aware Allocation Insights
+- JWT Authentication
+- AI Financial Assistant (In Progress)
+
+## Project Status
+
+### Completed
+- JWT Authentication
+- Dashboard Analytics
 - Budget Planner
 - Goals Module
+- Financial Health Score
+- Subscription Detection
 - OCR Pipeline
 
-Planned:
-- OTP Verification
-- Real Bank/UPI Integration (current stutus - Sandbox Simulation (Mock Data))
-- Live Market Analysis      (current status - Basic Market Data Integration)
+### In Progress
 - AI Assistant
+- Live Market Analysis (Basic Market Data Integration)
+- UPI/Banking Sandbox Simulation
+
+### Planned
+- OTP Verification
+- Real Bank/UPI Integration
 - Portfolio Tracking
 - Advanced ML Recommendations
 
@@ -83,7 +98,7 @@ Once you have set up and started all three microservices (Frontend, Backend, and
   * *"How much did I spend on dining out this month?"*
   * *"Can I afford to save ₹10,000 more for my emergency fund goal?"*
   * *"List all my detected recurring subscription expenses."*
-* Receive instant data-driven insights from the chatbot contextually populated with your database values.
+* The AI Assistant module is currently under development. The current implementation supports basic financial queries and conversational workflows, with advanced personalized insights planned for future releases.
 
 ---
 
