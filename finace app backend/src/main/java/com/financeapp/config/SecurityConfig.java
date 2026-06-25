@@ -52,7 +52,19 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:5173", "http://127.0.0.1:5173"));
+        
+        // Retrieve optional custom origins from environment, or default to localhost + Vercel preview domains
+        String envOrigins = System.getenv("ALLOWED_ORIGINS");
+        if (envOrigins != null && !envOrigins.isEmpty()) {
+            configuration.setAllowedOriginPatterns(Arrays.asList(envOrigins.split(",")));
+        } else {
+            configuration.setAllowedOriginPatterns(Arrays.asList(
+                    "http://localhost:5173", 
+                    "http://127.0.0.1:5173", 
+                    "https://*.vercel.app"
+            ));
+        }
+        
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Cache-Control"));
         configuration.setAllowCredentials(true);

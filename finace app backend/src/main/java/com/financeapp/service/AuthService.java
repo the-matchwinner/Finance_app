@@ -26,6 +26,10 @@ public class AuthService {
 
     public AuthResponse register(RegisterRequest request) {
 
+        if (!com.financeapp.util.EmailValidator.hasMxRecord(request.getEmail())) {
+            throw new RuntimeException("Invalid email domain. Please enter a genuine email address.");
+        }
+
         if (userRepository.existsByEmail(request.getEmail())) {
             throw new RuntimeException("Email already in use");
         }
