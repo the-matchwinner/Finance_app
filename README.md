@@ -7,6 +7,8 @@
 
 An AI-powered financial intelligence platform designed to help users transition from passive budgeting to active wealth generation. The app tracks spending, monitors recurring subscriptions, scans receipts using AI OCR, forecasts savings paths against goal timelines, and dynamically rebalances budget recommendations using market trend and volatility insights.
 
+👉 **Live App**: [https://intellivest-frontend.vercel.app](https://intellivest-frontend.vercel.app)
+
 ## Screenshots & Architecture
 
 ### Dashboard
@@ -38,7 +40,7 @@ An AI-powered financial intelligence platform designed to help users transition 
 - Subscription Detection
 - Market-Aware Allocation Insights
 - JWT Authentication
-- AI Financial Assistant (In Progress)
+- AI Financial Assistant
 
 ## Project Status
 
@@ -50,9 +52,9 @@ An AI-powered financial intelligence platform designed to help users transition 
 - Financial Health Score
 - Subscription Detection
 - OCR Pipeline
+- AI Assistant (Gemini-powered stateful chat)
 
 ### In Progress
-- AI Assistant
 - Live Market Analysis (Basic Market Data Integration)
 - UPI/Banking Sandbox Simulation
 
@@ -61,6 +63,7 @@ An AI-powered financial intelligence platform designed to help users transition 
 - Real Bank/UPI Integration
 - Portfolio Tracking
 - Advanced ML Recommendations
+- Refining & further developing the AI Assistant
 
 ---
 
@@ -98,7 +101,7 @@ Once you have set up and started all three microservices (Frontend, Backend, and
   * *"How much did I spend on dining out this month?"*
   * *"Can I afford to save ₹10,000 more for my emergency fund goal?"*
   * *"List all my detected recurring subscription expenses."*
-* The AI Assistant module is currently under development. The current implementation supports basic financial queries and conversational workflows, with advanced personalized insights planned for future releases.
+* The AI Assistant is powered by the Gemini API (`gemini-2.5-flash`) and provides personalized financial insights, analysis of active transactions, budget queries, and savings recommendations.
 
 ---
 
@@ -107,7 +110,16 @@ Once you have set up and started all three microservices (Frontend, Backend, and
 * **Frontend**: Vite + React + TailwindCSS + Recharts
 * **Backend**: Java Spring Boot + Maven + Spring Security (JWT) + Hibernate/JPA
 * **ML Engine**: Python + FastAPI + Uvicorn + Scikit-Learn
-* **Database**: PostgreSQL
+* **Database**: PostgreSQL (Local / Neon Cloud)
+
+---
+
+## Cloud Deployment Info
+
+The production environment of IntelliVest is fully hosted in the cloud:
+* **Frontend**: Deployed on **Vercel** at [https://intellivest-frontend.vercel.app](https://intellivest-frontend.vercel.app)
+* **Backend**: Deployed on **Render** at [https://intellivest-backend.onrender.com](https://intellivest-backend.onrender.com) using a Docker container environment.
+* **Database**: Serverless PostgreSQL hosted on **Neon.tech** database cluster.
 
 ---
 
@@ -181,7 +193,17 @@ The application expects a local PostgreSQL server running on port **5432** with 
    ```bash
    cd "finace app backend"
    ```
-2. Start the application:
+2. Configure Environment Variables (Required for AI features & DB customization):
+   Set the following variables before launching:
+   * **Gemini API Key** (Required for the AI Assistant):
+     * macOS/Linux: `export GEMINI_API_KEY="your-gemini-api-key"`
+     * Windows (CMD): `set GEMINI_API_KEY="your-gemini-api-key"`
+     * Windows (PowerShell): `$env:GEMINI_API_KEY="your-gemini-api-key"`
+   * **Database Configuration** (Optional, falls back to local PostgreSQL):
+     * `SPRING_DATASOURCE_URL`, `SPRING_DATASOURCE_USERNAME`, `SPRING_DATASOURCE_PASSWORD`
+     * `PORT` (Optional, defaults to 8081)
+
+3. Start the application:
    * **macOS / Linux**:
      ```bash
      chmod +x mvnw
